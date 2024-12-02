@@ -40,4 +40,5 @@ public class EventRepository {
     public void save(Event event) {
         DataHolder.events.add(event);
     }
+
 }

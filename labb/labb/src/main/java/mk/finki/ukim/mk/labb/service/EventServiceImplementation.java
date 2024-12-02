@@ -68,11 +68,11 @@ public class EventServiceImplementation implements EventService {
     }
 
 
-    @Override
+  /*  @Override
     public void delete(Long id) {
         this.eventRepository.delete(id);
 
-    }
+    }*/
 
     @Override
     public Optional<Event> save(String name, String description, double popularityScore, Long locationId) {
@@ -85,6 +85,19 @@ public class EventServiceImplementation implements EventService {
         }
         return Optional.empty();
     }
+
+
+    @Override
+    public List<Event> findAllByLocation_Id(Long locationId) {
+        return eventRepository.findAllByLocation_Id(locationId);
+    }
+
+    @Override
+    public void delete(Long id) {
+        eventRepository.deleteById(id);
+    }
+
+
 
 
 

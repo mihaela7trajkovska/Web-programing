@@ -9,13 +9,15 @@ import java.util.Optional;
 
 public interface EventService {
     List<Event> listAll();
-   // List<Event> searchEvents(String text);
+    // List<Event> searchEvents(String text);
 
     Optional<Event> findById(Long id);
 
-    Optional <Event> edit(Long id, String name, String description, double popularityScore, Long locationId);
+    Optional<Event> edit(Long id, String name, String description, double popularityScore, Long locationId);
 
     void delete(Long id);
 
     Optional<Event> save(String name, String description, double popularityScore, Long locationId);
+
+    List<Event> findAllByLocation_Id(Long locationId);
 }

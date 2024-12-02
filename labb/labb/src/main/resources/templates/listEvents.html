@@ -29,7 +29,8 @@
         <br/>
 
         <!-- Edit and Delete buttons -->
-        <a th:href="@{/events/edit-form/{id}(id=${event.id})}">
+       <!--  <a th:href="@{/events/edit-form/{id}(id=${event.id})}"> -->
+        <a th:href="@{/events/form?id=${event.id}}">
           <button type="button">Edit</button>
         </a>
         <form th:action="@{/events/delete/{id}(id=${event.id})}" method="post" style="display:inline;">
