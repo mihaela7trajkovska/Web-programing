@@ -1,2 +1,2 @@
 # Web-programing
-Lab exercices
+Lab exercice
